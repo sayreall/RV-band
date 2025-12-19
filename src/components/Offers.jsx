@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+// Import local event images
+import offerImage1 from '../assets/images/582290225_1933940290527507_7135578705968404593_n.jpg'
+import offerImage2 from '../assets/images/582045107_810687021999435_6019288298365366748_n.jpg'
+import offerImage3 from '../assets/images/582272070_2620479911655700_52137253618084341_n.jpg'
 
 const Offers = () => {
   const [currentIndex, setCurrentIndex] = useState(1)
@@ -6,19 +10,19 @@ const Offers = () => {
   const offers = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800',
+      image: offerImage1,
       text: 'Lights that inspire.',
       text2: 'Sound that moves.'
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800',
+      image: offerImage2,
       text: 'Lights that inspire.',
       text2: 'Sound that moves.'
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800',
+      image: offerImage3,
       text: 'Lights that inspire.',
       text2: 'Sound that moves.'
     }

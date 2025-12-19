@@ -1,24 +1,35 @@
 import React, { useState } from 'react'
+// Import local event images
+import equipImage1 from '../assets/images/583048166_1153531953160512_6880170682527200680_n.jpg'
+import equipImage2 from '../assets/images/582695076_2617630148602354_3722048634573263992_n.jpg'
+import equipImage3 from '../assets/images/582001913_721984314254455_3555283768912345584_n.jpg'
+import equipImage4 from '../assets/images/582084898_1176150047228203_5657782980348705638_n.jpg'
+import equipImage5 from '../assets/images/582283967_1940908839824359_3512379180942013471_n.jpg'
+import equipImage6 from '../assets/images/582290225_1933940290527507_7135578705968404593_n.jpg'
+import equipImage7 from '../assets/images/582045107_810687021999435_6019288298365366748_n.jpg'
+import equipImage8 from '../assets/images/582272070_2620479911655700_52137253618084341_n.jpg'
+import equipImage9 from '../assets/images/582288603_2038509166928298_4158169005903112811_n.jpg'
+import equipImage10 from '../assets/images/582706413_2443418052790632_71835046533602200_n.jpg'
 
 const Equipment = () => {
   const [activeTab, setActiveTab] = useState('lights')
 
   const lightsImages = [
-    { url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600', title: 'Stage Beams', desc: 'High intensity LED' },
-    { url: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600', title: 'Mood Lighting', desc: 'Ambient control' },
-    { url: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600', title: 'Spotlights', desc: 'Focus tracking' },
-    { url: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600', title: 'Laser Arrays', desc: 'Dynamic effects' },
-    { url: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600', title: 'Neon Strips', desc: 'Cyberpunk aesthetic' },
-    { url: 'https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=600', title: 'Strobes', desc: 'High frequency' },
+    { url: equipImage1, title: 'Stage Beams', desc: 'High intensity LED' },
+    { url: equipImage2, title: 'Mood Lighting', desc: 'Ambient control' },
+    { url: equipImage3, title: 'Spotlights', desc: 'Focus tracking' },
+    { url: equipImage4, title: 'Laser Arrays', desc: 'Dynamic effects' },
+    { url: equipImage5, title: 'Neon Strips', desc: 'Cyberpunk aesthetic' },
+    { url: equipImage6, title: 'Strobes', desc: 'High frequency' },
   ]
 
   const soundsImages = [
-    { url: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600', title: 'Line Arrays', desc: 'Crystal clear audio' },
-    { url: 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=600', title: 'Mixing Consoles', desc: 'Digital control' },
-    { url: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600', title: 'Microphones', desc: 'Vocal precision' },
-    { url: 'https://images.unsplash.com/photo-1519508234439-4f23643125c1?w=600', title: 'Monitors', desc: 'Stage feedback' },
-    { url: 'https://images.unsplash.com/photo-1482442120256-9c03866de390?w=600', title: 'Amplifiers', desc: 'Raw power' },
-    { url: 'https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=600', title: 'Guitars', desc: 'Electric soul' },
+    { url: equipImage7, title: 'Line Arrays', desc: 'Crystal clear audio' },
+    { url: equipImage8, title: 'Mixing Consoles', desc: 'Digital control' },
+    { url: equipImage9, title: 'Microphones', desc: 'Vocal precision' },
+    { url: equipImage10, title: 'Monitors', desc: 'Stage feedback' },
+    { url: equipImage1, title: 'Amplifiers', desc: 'Raw power' },
+    { url: equipImage2, title: 'Guitars', desc: 'Electric soul' },
   ]
 
   const currentItems = activeTab === 'lights' ? lightsImages : soundsImages

@@ -1,4 +1,6 @@
 import React from 'react'
+// Import local event image
+import aboutImage from '../assets/images/584497298_122105131377117167_6899747358995646845_n.jpg'
 
 const About = () => {
   return (
@@ -78,8 +80,8 @@ const About = () => {
             {/* Image Container */}
             <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)] md:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
               <img
-                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800"
-                alt="Concert event with red lights"
+                src={aboutImage}
+                alt="RV Lights and Sounds event"
                 className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
               />
               

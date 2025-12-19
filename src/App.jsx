@@ -5,6 +5,7 @@ import About from './components/About'
 import Offers from './components/Offers'
 import Equipment from './components/Equipment'
 import OurBand from './components/OurBand'
+import Appointment from './components/Appointment'
 import Footer from './components/Footer'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Offers />
       <Equipment />
       <OurBand />
+      <Appointment />
       <Footer />
     </div>
   )

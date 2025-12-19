@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
+// Import local event images
+import heroImage1 from '../assets/images/583048166_1153531953160512_6880170682527200680_n.jpg'
+import heroImage2 from '../assets/images/582695076_2617630148602354_3722048634573263992_n.jpg'
+import heroImage3 from '../assets/images/582283967_1940908839824359_3512379180942013471_n.jpg'
+import heroImage4 from '../assets/images/582706413_2443418052790632_71835046533602200_n.jpg'
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(1)
 
   const slides = [
-    { id: 0, image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800' },
-    { id: 1, image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800' },
-    { id: 2, image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800' },
-    { id: 3, image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800' },
+    { id: 0, image: heroImage1 },
+    { id: 1, image: heroImage2 },
+    { id: 2, image: heroImage3 },
+    { id: 3, image: heroImage4 },
   ]
 
   const nextSlide = () => {

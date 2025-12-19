@@ -1,20 +1,33 @@
 import React from 'react'
+// Import local event images
+import bandPhoto1 from '../assets/images/582001913_721984314254455_3555283768912345584_n.jpg'
+import bandPhoto2 from '../assets/images/582288603_2038509166928298_4158169005903112811_n.jpg'
+import bandPhoto3 from '../assets/images/582290225_1933940290527507_7135578705968404593_n.jpg'
+import bandPhoto4 from '../assets/images/582045107_810687021999435_6019288298365366748_n.jpg'
+import memberImage1 from '../assets/images/582272070_2620479911655700_52137253618084341_n.jpg'
+import memberImage2 from '../assets/images/582695076_2617630148602354_3722048634573263992_n.jpg'
+import memberImage3 from '../assets/images/583048166_1153531953160512_6880170682527200680_n.jpg'
+import memberImage4 from '../assets/images/582283967_1940908839824359_3512379180942013471_n.jpg'
+import memberImage5 from '../assets/images/582706413_2443418052790632_71835046533602200_n.jpg'
+import memberImage6 from '../assets/images/582084898_1176150047228203_5657782980348705638_n.jpg'
+import memberImage7 from '../assets/images/582084898_1176150047228203_5657782980348705638_n.jpg'
 
 const OurBand = () => {
   const bandPhotos = [
-    'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800',
-    'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600',
-    'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600',
-    'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800',
+    bandPhoto1,
+    bandPhoto2,
+    bandPhoto3,
+    bandPhoto4,
   ]
 
   const members = [
-    { name: 'Marlon Portugal', role: 'Keyboardist', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100' },
-    { name: 'Marlon Portugal', role: 'Keyboardist', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100' },
-    { name: 'Marlon Portugal', role: 'Keyboardist', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100' },
-    { name: 'Marlon Portugal', role: 'Keyboardist', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100' },
-    { name: 'Marlon Portugal', role: 'Keyboardist', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100' },
-    { name: 'Marlon Portugal', role: 'Keyboardist', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100' },
+    { name: 'Richard Villafor', role: 'Drummer', image: memberImage1 },
+    { name: 'Joyce Ann Remolin', role: 'Female Vocalist', image: memberImage2 },
+    { name: 'Richard De Jesus ', role: 'Male Vocalist', image: memberImage3 },
+    { name: 'Maycee San Miguel', role: 'Female Vocalist', image: memberImage4 },
+    { name: 'Ryniel Santos', role: 'Keyboard', image: memberImage5 },
+    { name: 'Eleazar Sapin', role: 'Lead Guitarist', image: memberImage6 },
+    { name: 'Glenn Grabrido', role: 'Bass Guitarist', image: memberImage7 }
   ]
 
   return (

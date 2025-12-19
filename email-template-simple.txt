@@ -1,0 +1,37 @@
+Subject: New Appointment Request from {{from_name}}
+
+========================================
+   RV LIGHTS AND SOUNDS
+   NEW APPOINTMENT REQUEST
+========================================
+
+📞 CONTACT INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Full Name: {{from_name}}
+Email: {{from_email}}
+Phone: {{phone}}
+
+🎉 EVENT DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Event Type: {{event_type}}
+Event Date: {{event_date}}
+Event Time: {{event_time}}
+Location: {{location}}
+Expected Guests: {{#guests}}{{guests}}{{/guests}}{{^guests}}Not specified{{/guests}}
+
+💬 ADDITIONAL MESSAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+{{#message}}{{message}}{{/message}}{{^message}}No additional message provided.{{/message}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚡ Action Required: Please contact the client to confirm this appointment.
+
+---
+This email was sent from the RV Band website appointment form.
+© 2025 RV Lights and Sounds. All rights reserved.
+
+

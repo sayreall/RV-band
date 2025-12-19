@@ -26,7 +26,7 @@ const Header = () => {
             { name: 'About', href: '#about' },
             { name: 'Offers', href: '#offers' },
             { name: 'Equipment', href: '#equipment' },
-            { name: 'Our Band', href: '#our-band' }
+            { name: 'Our Band', href: '#our-band' },
           ].map((item) => (
             <a
               key={item.name}
@@ -49,9 +49,12 @@ const Header = () => {
         </div>
 
         {/* Right: Book Us Button */}
-        <button className="hidden lg:block bg-gradient-to-r from-red-700 to-red-600 text-white px-8 py-2.5 rounded-full text-sm font-semibold hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:scale-105 transition-all duration-300">
+        <a 
+          href="#appointment"
+          className="hidden lg:block bg-gradient-to-r from-red-700 to-red-600 text-white px-8 py-2.5 rounded-full text-sm font-semibold hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:scale-105 transition-all duration-300"
+        >
           Book Us
-        </button>
+        </a>
 
         {/* Mobile Menu Button */}
         <button 
@@ -73,7 +76,7 @@ const Header = () => {
         mobileMenuOpen ? 'max-h-96' : 'max-h-0'
       }`}>
         <nav className="bg-gray-900/95 backdrop-blur-lg px-6 py-4 space-y-4">
-          {['Home', 'About', 'Offers', 'Equipment', 'Our Band'].map((item) => (
+          {['Home', 'About', 'Offers', 'Equipment', 'Our Band', 'Appointment'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -83,9 +86,13 @@ const Header = () => {
               {item}
             </a>
           ))}
-          <button className="w-full bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-3 rounded-full text-sm font-semibold">
+          <a 
+            href="#appointment"
+            className="w-full bg-gradient-to-r from-red-600 to-red-500 text-white px-8 py-3 rounded-full text-sm font-semibold text-center block"
+            onClick={() => setMobileMenuOpen(false)}
+          >
             Book Us
-          </button>
+          </a>
         </nav>
       </div>
     </header>

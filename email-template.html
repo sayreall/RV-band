@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Appointment Request - RV Lights and Sounds</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .email-header {
+            background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .email-header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .email-header .badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            margin-top: 10px;
+        }
+        
+        .email-body {
+            padding: 30px;
+            color: #e5e5e5;
+        }
+        
+        .section-title {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 25px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dc2626;
+        }
+        
+        .info-row {
+            margin: 15px 0;
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #dc2626;
+            border-radius: 4px;
+        }
+        
+        .info-label {
+            color: #dc2626;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        
+        .info-value {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .event-details {
+            background-color: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .event-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .message-box {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            min-height: 80px;
+        }
+        
+        .message-box .info-value {
+            color: #e5e5e5;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        
+        .email-footer {
+            background-color: #0a0a0a;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .email-footer p {
+            color: #9ca3af;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #dc2626, transparent);
+            margin: 25px 0;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .event-details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .email-body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="email-header">
+            <h1>RV LIGHTS AND SOUNDS</h1>
+            <div class="badge">NEW APPOINTMENT REQUEST</div>
+        </div>
+        
+        <!-- Body -->
+        <div class="email-body">
+            <!-- Contact Information -->
+            <div class="section-title">📞 Contact Information</div>
+            
+            <div class="info-row">
+                <div class="info-label">Full Name</div>
+                <div class="info-value">{{from_name}}</div>
+            </div>
+            
+            <div class="info-row">
+                <div class="info-label">Email Address</div>
+                <div class="info-value">{{from_email}}</div>
+            </div>
+            
+            <div class="info-row">
+                <div class="info-label">Phone Number</div>
+                <div class="info-value">{{phone}}</div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <!-- Event Details -->
+            <div class="section-title">🎉 Event Details</div>
+            
+            <div class="event-details">
+                <div class="event-details-grid">
+                    <div class="info-row" style="margin: 0;">
+                        <div class="info-label">Event Type</div>
+                        <div class="info-value">{{event_type}}</div>
+                    </div>
+                    
+                    <div class="info-row" style="margin: 0;">
+                        <div class="info-label">Event Date</div>
+                        <div class="info-value">{{event_date}}</div>
+                    </div>
+                    
+                    <div class="info-row" style="margin: 0;">
+                        <div class="info-label">Event Time</div>
+                        <div class="info-value">{{event_time}}</div>
+                    </div>
+                    
+                    <div class="info-row" style="margin: 0;">
+                        <div class="info-label">Expected Guests</div>
+                        <div class="info-value">{{#guests}}{{guests}}{{/guests}}{{^guests}}Not specified{{/guests}}</div>
+                    </div>
+                </div>
+                
+                <div class="info-row" style="margin-top: 15px;">
+                    <div class="info-label">Event Location</div>
+                    <div class="info-value">{{location}}</div>
+                </div>
+            </div>
+            
+            <!-- Additional Message -->
+            {{#message}}
+            <div class="section-title">💬 Additional Message</div>
+            <div class="message-box">
+                <div class="info-value">{{message}}</div>
+            </div>
+            {{/message}}
+            
+            <div class="divider"></div>
+            
+            <!-- Action Note -->
+            <div style="background-color: rgba(220, 38, 38, 0.15); border-left: 4px solid #dc2626; padding: 15px; border-radius: 4px; margin-top: 20px;">
+                <p style="color: #ffffff; margin: 0; font-size: 14px; font-weight: 600;">
+                    ⚡ Action Required: Please contact the client to confirm this appointment.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="email-footer">
+            <p><strong>RV Lights and Sounds</strong></p>
+            <p>This email was sent from the RV Band website appointment form.</p>
+            <p style="margin-top: 15px; font-size: 11px; color: #6b7280;">
+                © 2025 RV Lights and Sounds. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+
