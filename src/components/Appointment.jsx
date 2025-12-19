@@ -12,6 +12,7 @@ import eventImage8 from '../assets/images/582272070_2620479911655700_52137253618
 import eventImage9 from '../assets/images/582288603_2038509166928298_4158169005903112811_n.jpg'
 import eventImage10 from '../assets/images/582706413_2443418052790632_71835046533602200_n.jpg'
 
+
 const Appointment = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [formData, setFormData] = useState({
@@ -108,10 +109,10 @@ const Appointment = () => {
       // VITE_EMAILJS_PUBLIC_KEY=your_public_key
       // VITE_EMAILJS_SERVICE_ID=your_service_id
       // VITE_EMAILJS_TEMPLATE_ID=your_template_id
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'psL0QBsMhnV-Oz7Ee'
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_fv0necg'
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_02mt8pg'
-      const recipientEmail = import.meta.env.VITE_RECIPIENT_EMAIL || 'rvlightsandsounds@gmail.com'
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+      const recipientEmail = import.meta.env.VITE_RECIPIENT_EMAIL
 
       // Initialize EmailJS with your public key
       emailjs.init(publicKey)
